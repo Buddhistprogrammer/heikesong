@@ -1,0 +1,74 @@
+{
+  "version": "v6-core-1",
+  "actions": ["idle", "approach", "look_up", "sit", "turn_book", "wag", "guide"],
+  "safety_terms": ["不想活", "自杀", "伤害自己", "被欺负", "打我", "自残"],
+  "targets": {
+    "ocean": "实现愿望 · 去看海",
+    "desert": "翻开《小王子》",
+    "inside": "坐进七彩玻璃球",
+    "home": "回到温暖的家",
+    "tree": "看看猴面包树",
+    "well": "去水井旁坐坐",
+    "stars": "看看远处的星星"
+  },
+  "scenes": {
+    "home": {
+      "title": "家 · 每段旅程的起点",
+      "targets": ["ocean", "desert"],
+      "hotspots": [""],
+      "opening": "今天想跟我说些什么？想念家人的时候，我们可以先在这里坐一会儿。也可以告诉我一个小小的愿望。",
+      "caption": "窗边的光、全家福和一本书。今天的故事从这里开始。",
+      "placeholder": "例如：我想坐在七彩玻璃球里看大海",
+      "quick_questions": ["爸爸妈妈出差了，我有点想他们", "我想坐在七彩玻璃球里面看大海"],
+      "fallback": "我在这里听你说。你可以给想念的人留一句话，也可以告诉我一个小愿望。我们先去看海，或打开书里的沙漠？"
+    },
+    "ocean": {
+      "title": "心象之境 · 把愿望放进海风",
+      "targets": ["inside", "home"],
+      "hotspots": [""],
+      "opening": "你的小愿望有了模样：七彩玻璃球正漂浮在海面上空。我们坐进去，让海天慢慢展开吧。",
+      "caption": "玻璃球外 · 海风托起了一点点想象。",
+      "placeholder": "坐在海面上空，你想说些什么？",
+      "quick_questions": ["我想把这片海送给想念的人", "我们安静地看一会儿海吧"],
+      "fallback": "海面在慢慢起伏，我就在你旁边。想说什么可以慢慢说，也可以什么都不说，听一会儿想象中的海浪。"
+    },
+    "desert": {
+      "title": "文脉之境 · 书页里的沙漠",
+      "targets": ["tree", "well", "stars", "home"],
+      "hotspots": ["", "tree", "well", "stars"],
+      "opening": "我们走进了按书中意象绘制的沙漠。树和水井在同一张地图上，先去哪里，由你决定。",
+      "caption": "同一片沙漠，藏着关于照料、寻找与珍贵的小问题。",
+      "placeholder": "问问眼前的意象，或说说你的理解",
+      "quick_questions": ["它为什么在这里？", "这让我想到了自己的生活"],
+      "fallback": "这里把书中的意象放在同一片探索空间。我们可以先看看猴面包树，再到水井旁坐坐；每个地方都有一个可以慢慢想的问题。"
+    }
+  },
+  "culture_cards": {
+    "tree": {
+      "title": "猴面包树 · 照料与成长",
+      "review_status": "draft",
+      "interpretation": "在这段文学探索里，猴面包树让我们想到：小小的事情，也需要留心照料。及时面对问题，可以避免它在不知不觉间变大。这是对意象的一种阅读理解，不是唯一答案。",
+      "question": "你有没有一件想从今天开始，慢慢照料的小事？",
+      "action": "look_up",
+      "suggestions": ["well", "home"],
+      "quick_questions": ["为什么小问题也要及时关心？", "我想照顾好一盆植物"]
+    },
+    "well": {
+      "title": "沙漠水井 · 寻找与希望",
+      "review_status": "draft",
+      "interpretation": "沙漠里的水井，可以让人想到寻找与希望。它的珍贵不只在看见水的那一刻，也在一起寻找的路上。有些重要的东西，并不能只凭表面判断。",
+      "question": "有什么看起来不起眼的东西，对你却很珍贵？",
+      "action": "sit",
+      "suggestions": ["stars", "home"],
+      "quick_questions": ["为什么寻找的过程也很重要？", "陪伴对我来说很珍贵"]
+    }
+  },
+  "milestones": [
+    {"id": "companion", "title": "认识专属旅伴", "hint": "选定形象和名字，让旅伴来到家里。"},
+    {"id": "family", "title": "在家聊聊心情", "hint": "点击全家福，或告诉旅伴你的想念。"},
+    {"id": "ocean", "title": "把愿望带进玻璃球", "hint": "说出看海愿望，再切换到球内视角。"},
+    {"id": "tree", "title": "和猴面包树相遇", "hint": "翻开书，点击树并听取一次回应。"},
+    {"id": "well", "title": "在水井旁停一停", "hint": "点击水井，聊聊什么对你很珍贵。"},
+    {"id": "stars", "title": "向下一段探索挥手", "hint": "看看星星预告，带着一个问题回家。"}
+  ]
+}
